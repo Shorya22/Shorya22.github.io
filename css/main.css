@@ -1282,8 +1282,9 @@ section { padding: var(--pad-section) 0; position: relative; z-index: 2; }
 
 /* Tablets / small laptops (≤1024) */
 @media (max-width: 1024px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-right { order: -1; max-width: 580px; margin: 0 auto; width: 100%; }
+  .hero { padding-top: clamp(120px, 14vh, 150px); }
+  .hero-grid { grid-template-columns: 1fr; gap: clamp(28px, 5vw, 44px); }
+  .hero-right { max-width: 620px; margin: 0 auto; width: 100%; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
