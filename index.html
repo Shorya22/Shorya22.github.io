@@ -134,19 +134,19 @@
 <span class="ln"><span class="c-kw">from</span> <span class="c-var">mcp</span> <span class="c-kw">import</span> <span class="c-fn">Server</span>, <span class="c-fn">Tool</span></span>
 <span class="ln">&nbsp;</span>
 <span class="ln"><span class="c-var">profile</span> = {</span>
-<span class="ln">  <span class="c-str">"role"</span>: <span class="c-str">"Senior AI Engineer"</span>,</span>
-<span class="ln">  <span class="c-str">"focus"</span>: [<span class="c-str">"Agentic AI"</span>, <span class="c-str">"MCP"</span>, <span class="c-str">"RAG"</span>],</span>
-<span class="ln">  <span class="c-str">"stack"</span>: [<span class="c-str">"LangGraph"</span>, <span class="c-str">"FastAPI"</span>, <span class="c-str">"AWS"</span>],</span>
-<span class="ln">  <span class="c-str">"experience"</span>: <span class="c-num">6</span>,</span>
-<span class="ln">  <span class="c-str">"shipped"</span>: <span class="c-num">25</span>+ <span class="c-com"># projects</span></span>
+<span class="ln">&nbsp;&nbsp;<span class="c-str">"role"</span>: <span class="c-str">"Senior AI Engineer"</span>,</span>
+<span class="ln">&nbsp;&nbsp;<span class="c-str">"focus"</span>: [<span class="c-str">"Agentic AI"</span>, <span class="c-str">"MCP"</span>, <span class="c-str">"RAG"</span>],</span>
+<span class="ln">&nbsp;&nbsp;<span class="c-str">"stack"</span>: [<span class="c-str">"LangGraph"</span>, <span class="c-str">"FastAPI"</span>, <span class="c-str">"AWS"</span>],</span>
+<span class="ln">&nbsp;&nbsp;<span class="c-str">"experience"</span>: <span class="c-num">6</span>,</span>
+<span class="ln">&nbsp;&nbsp;<span class="c-str">"shipped"</span>: <span class="c-num">25</span>+ <span class="c-com"># projects</span></span>
 <span class="ln">}</span>
 <span class="ln">&nbsp;</span>
 <span class="ln"><span class="c-kw">async def</span> <span class="c-fn">build</span>(<span class="c-var">vision</span>):</span>
-<span class="ln">  <span class="c-kw">return await</span> <span class="c-fn">orchestrate</span>(</span>
-<span class="ln">    <span class="c-key">agents</span>=<span class="c-fn">multi_agent</span>(),</span>
-<span class="ln">    <span class="c-key">retrieval</span>=<span class="c-fn">rag_pipeline</span>(),</span>
-<span class="ln">    <span class="c-key">tools</span>=<span class="c-fn">mcp_servers</span>(),</span>
-<span class="ln">  )</span>
+<span class="ln">&nbsp;&nbsp;<span class="c-kw">return await</span> <span class="c-fn">orchestrate</span>(</span>
+<span class="ln">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-key">agents</span>=<span class="c-fn">multi_agent</span>(),</span>
+<span class="ln">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-key">retrieval</span>=<span class="c-fn">rag_pipeline</span>(),</span>
+<span class="ln">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-key">tools</span>=<span class="c-fn">mcp_servers</span>(),</span>
+<span class="ln">&nbsp;&nbsp;)</span>
             </div>
           </div>
         </div>
