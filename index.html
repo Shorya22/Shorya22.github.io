@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07070c" />
   <title>Shorya Sharma — Senior AI Engineer · Agentic AI · MCP · GenAI</title>
   <meta name="description" content="Senior AI Engineer specializing in Agentic AI, Generative AI, Model Context Protocol (MCP), Multi-Agent Systems, and Retrieval-Augmented Generation (RAG). Building production-grade AI systems with Python, FastAPI, Docker, and AWS." />
   <meta name="author" content="Shorya Sharma" />
@@ -14,18 +15,23 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
+
+  <!-- animated bg layers -->
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
 
   <!-- ============== NAV ============== -->
   <nav class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <span class="brand-mark">SS</span>
-        <span class="brand-name">Shorya Sharma <span>/ AI Engineer</span></span>
+        <span class="brand-name">Shorya Sharma <span class="subtle">/ AI Engineer</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
@@ -35,15 +41,28 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://drive.google.com/file/d/1WhcgdDEqDg4rINuAzCettZJgPwj8aJy7/view?usp=sharing" target="_blank" rel="noopener" class="nav-cta">
+      <a href="https://drive.google.com/file/d/1dz6KFy87q8MrU8hWyin2pyFueuHCeNCx/view?usp=drivesdk" target="_blank" rel="noopener" class="nav-cta">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Resume
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg id="navIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
   </nav>
+
+  <!-- ============== MOBILE DRAWER ============== -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://drive.google.com/file/d/1dz6KFy87q8MrU8hWyin2pyFueuHCeNCx/view?usp=drivesdk" target="_blank" rel="noopener" class="drawer-cta">Download Resume</a>
+  </div>
 
   <!-- ============== HERO ============== -->
   <section class="hero" id="home">
@@ -52,20 +71,22 @@
         <div class="hero-left">
           <div class="eyebrow">
             <span class="dot"></span>
-            Available for AI Engineering opportunities
+            Available for Senior AI Engineering opportunities
           </div>
           <h1>
-            Building <span class="gradient">Agentic AI</span><br/>
+            Building <span class="gradient-text">Agentic&nbsp;AI</span><br/>
             &amp; production-grade<br/>
-            <span class="gradient">GenAI systems</span>.
+            <span class="gradient-text">GenAI&nbsp;systems</span>.
           </h1>
+
           <div class="hero-role">
             <span class="role-prefix">~/</span>
             <span class="role-text" id="roleText">Senior AI Engineer</span>
             <span class="cursor"></span>
           </div>
+
           <p class="hero-desc">
-            I'm <strong style="color:var(--text)">Shorya Sharma</strong> — a Senior AI Engineer specializing in Agentic AI, Multi-Agent Systems, MCP (Model Context Protocol), and Retrieval-Augmented Generation. I design and ship enterprise-scale LLM applications: from RAG pipelines and fine-tuned models to autonomous agents deployed on AWS with FastAPI &amp; Docker.
+            I'm <strong>Shorya Sharma</strong> — a Senior AI Engineer specializing in <strong>Agentic AI</strong>, <strong>Multi-Agent Systems</strong>, <strong>MCP (Model Context Protocol)</strong>, and <strong>Retrieval-Augmented Generation</strong>. I design and ship enterprise-scale LLM applications: from RAG pipelines and fine-tuned models to autonomous agents deployed on AWS with FastAPI &amp; Docker.
           </p>
 
           <div class="hero-cta">
@@ -88,7 +109,7 @@
               <a href="https://github.com/Shorya22" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
               </a>
-              <a href="https://www.linkedin.com/in/shoryamathura22/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/shoryamathura22" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </a>
               <a href="https://www.kaggle.com/shorya22" target="_blank" rel="noopener" class="social-btn" aria-label="Kaggle">
@@ -102,7 +123,7 @@
         </div>
 
         <div class="hero-right reveal">
-          <div class="terminal">
+          <div class="terminal" data-spotlight>
             <div class="terminal-header">
               <div class="dots"><span></span><span></span><span></span></div>
               <span class="title">~/shorya/agent.py</span>
@@ -133,8 +154,38 @@
     </div>
   </section>
 
+  <!-- ============== TECH MARQUEE ============== -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee" id="marquee">
+      <div class="marquee-item"><span class="ico"></span>LangGraph</div>
+      <div class="marquee-item"><span class="ico"></span>LangChain</div>
+      <div class="marquee-item"><span class="ico"></span>MCP Server</div>
+      <div class="marquee-item"><span class="ico"></span>OpenAI</div>
+      <div class="marquee-item"><span class="ico"></span>Claude</div>
+      <div class="marquee-item"><span class="ico"></span>Gemini</div>
+      <div class="marquee-item"><span class="ico"></span>LLaMA</div>
+      <div class="marquee-item"><span class="ico"></span>Mistral</div>
+      <div class="marquee-item"><span class="ico"></span>HuggingFace</div>
+      <div class="marquee-item"><span class="ico"></span>FastAPI</div>
+      <div class="marquee-item"><span class="ico"></span>Pinecone</div>
+      <div class="marquee-item"><span class="ico"></span>Weaviate</div>
+      <div class="marquee-item"><span class="ico"></span>FAISS</div>
+      <div class="marquee-item"><span class="ico"></span>Qdrant</div>
+      <div class="marquee-item"><span class="ico"></span>Docker</div>
+      <div class="marquee-item"><span class="ico"></span>AWS Lambda</div>
+      <div class="marquee-item"><span class="ico"></span>SageMaker</div>
+      <div class="marquee-item"><span class="ico"></span>PyTorch</div>
+      <div class="marquee-item"><span class="ico"></span>TensorFlow</div>
+      <div class="marquee-item"><span class="ico"></span>QLoRA</div>
+      <div class="marquee-item"><span class="ico"></span>MLflow</div>
+      <div class="marquee-item"><span class="ico"></span>YOLO</div>
+      <div class="marquee-item"><span class="ico"></span>OpenCV</div>
+      <div class="marquee-item"><span class="ico"></span>Streamlit</div>
+    </div>
+  </div>
+
   <!-- ============== STATS ============== -->
-  <section class="stats" style="padding:48px 0;">
+  <section class="stats">
     <div class="container">
       <div class="stats-grid">
         <div class="stat reveal">
@@ -162,7 +213,7 @@
     <div class="container">
       <div class="section-head reveal">
         <div class="section-tag">about_me</div>
-        <h2 class="section-title">Engineering <span class="gradient">intelligent systems</span> end-to-end</h2>
+        <h2 class="section-title">Engineering <span class="gradient-text">intelligent systems</span> end-to-end</h2>
         <p class="section-subtitle">From multi-agent orchestration to LLM fine-tuning and AWS deployments — I build AI products that actually ship to production.</p>
       </div>
 
@@ -172,7 +223,7 @@
             I'm a <strong>Senior AI Engineer</strong> at <strong>Mantra Smart Identity (Mantra Softech)</strong>, where I build next-gen agentic AI applications for identity and biometric solutions. My core focus is on <strong>Agentic AI architectures</strong>, <strong>Model Context Protocol (MCP)</strong> implementations, and <strong>multi-agent orchestration workflows</strong> that solve real enterprise problems.
           </p>
           <p>
-            Previously at <strong>L&amp;T Technology Services</strong>, I designed and deployed Generative AI &amp; Computer Vision models for surveillance, law enforcement, and enterprise NLP — taking ideas from POC to fully operationalized production. I work across the full stack: data pipelines, LLM fine-tuning (LoRA/QLoRA), RAG with vector DBs, FastAPI services, Docker, and AWS (EC2, Lambda, SageMaker, ECR).
+            Previously at <strong>L&amp;T Technology Services</strong>, I designed and deployed Generative AI &amp; Computer Vision models for surveillance, law enforcement, and enterprise NLP — taking ideas from POC to fully operationalized production. I work across the full stack: data pipelines, LLM fine-tuning (LoRA / QLoRA), RAG with vector DBs, FastAPI services, Docker, and AWS (EC2, Lambda, SageMaker, ECR).
           </p>
           <p>
             With 6+ years across IoT, manufacturing, and AI engineering, I bring an engineer's discipline to AI: production-grade APIs, observability, CI/CD, and clean architecture.
@@ -194,8 +245,8 @@
           </div>
         </div>
 
-        <div class="info-card reveal">
-          <h3>// profile</h3>
+        <div class="spotlight-card reveal" data-spotlight>
+          <div class="card-head">// profile</div>
           <ul class="info-list">
             <li><span>Name</span><span>Shorya Sharma</span></li>
             <li><span>Role</span><span>Senior AI Engineer</span></li>
@@ -215,24 +266,24 @@
     <div class="container">
       <div class="section-head reveal">
         <div class="section-tag">tech_stack</div>
-        <h2 class="section-title">The <span class="gradient">complete AI stack</span></h2>
+        <h2 class="section-title">The <span class="gradient-text">complete AI stack</span></h2>
         <p class="section-subtitle">Tools and frameworks I use to design, build, and ship production AI systems.</p>
       </div>
 
       <div class="skills-grid">
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6"/><path d="M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24"/><path d="M1 12h6m10 0h6"/><path d="M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/></svg>
           </div>
           <h3>Agentic AI &amp; MCP</h3>
           <ul class="skill-list">
             <li>LangGraph</li><li>LangChain</li><li>Langflow</li>
-            <li>Multi-Agent Systems</li><li>MCP Servers</li>
-            <li>A2A Communication</li><li>ReAct Agents</li><li>Tool Use</li>
+            <li>Multi-Agent</li><li>MCP Servers</li>
+            <li>A2A</li><li>ReAct</li><li>Tool Use</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
           </div>
@@ -240,15 +291,15 @@
           <ul class="skill-list">
             <li>GPT-4 / GPT-4o</li><li>Claude</li><li>Gemini</li>
             <li>LLaMA</li><li>Mistral</li><li>Gemma</li>
-            <li>BERT</li><li>HuggingFace</li><li>OpenAI SDK</li>
+            <li>BERT</li><li>HuggingFace</li><li>OpenAI</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg>
           </div>
-          <h3>RAG &amp; Vector Databases</h3>
+          <h3>RAG &amp; Vector DBs</h3>
           <ul class="skill-list">
             <li>Advanced RAG</li><li>FAISS</li><li>Weaviate</li>
             <li>Pinecone</li><li>Qdrant</li><li>Chroma</li>
@@ -256,31 +307,31 @@
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>LLM Fine-Tuning</h3>
           <ul class="skill-list">
             <li>PEFT</li><li>LoRA</li><li>QLoRA</li>
-            <li>Quantization</li><li>SFT</li><li>RLHF concepts</li>
-            <li>Custom Datasets</li><li>HF Trainer</li>
+            <li>Quantization</li><li>SFT</li><li>RLHF</li>
+            <li>HF Trainer</li><li>Custom Datasets</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <h3>ML / DL &amp; Computer Vision</h3>
           <ul class="skill-list">
             <li>PyTorch</li><li>TensorFlow</li><li>Keras</li>
-            <li>scikit-learn</li><li>YOLO / Ultralytics</li>
+            <li>scikit-learn</li><li>YOLO</li>
             <li>OpenCV</li><li>CNNs</li><li>Transformers</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
@@ -292,31 +343,31 @@
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
           <h3>Cloud &amp; Deployment</h3>
           <ul class="skill-list">
-            <li>AWS EC2</li><li>AWS Lambda</li><li>API Gateway</li>
+            <li>AWS EC2</li><li>Lambda</li><li>API Gateway</li>
             <li>SageMaker</li><li>ECR</li><li>S3</li>
             <li>Serverless</li><li>HF Spaces</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <h3>MLOps &amp; DevOps</h3>
           <ul class="skill-list">
             <li>Docker</li><li>CI/CD</li><li>GitHub Actions</li>
-            <li>MLflow</li><li>Weights &amp; Biases</li><li>DVC</li>
+            <li>MLflow</li><li>W&amp;B</li><li>DVC</li>
             <li>Prometheus</li><li>Grafana</li>
           </ul>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card reveal" data-spotlight>
           <div class="skill-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
           </div>
@@ -324,7 +375,7 @@
           <ul class="skill-list">
             <li>Pandas</li><li>NumPy</li><li>Power BI</li>
             <li>Matplotlib</li><li>Seaborn</li><li>EDA</li>
-            <li>Statistics</li><li>Data Wrangling</li>
+            <li>Statistics</li><li>Wrangling</li>
           </ul>
         </div>
       </div>
@@ -336,14 +387,14 @@
     <div class="container">
       <div class="section-head reveal">
         <div class="section-tag">work_history</div>
-        <h2 class="section-title">Professional <span class="gradient">experience</span></h2>
+        <h2 class="section-title">Professional <span class="gradient-text">experience</span></h2>
         <p class="section-subtitle">6+ years of engineering — from IoT and manufacturing to leading AI initiatives.</p>
       </div>
 
       <div class="timeline">
         <div class="exp reveal">
           <span class="exp-dot current"></span>
-          <div class="exp-card">
+          <div class="exp-card" data-spotlight>
             <div class="exp-meta">
               <h3 class="exp-role">Senior AI Engineer</h3>
               <span class="exp-date exp-current">Oct 2025 — Present</span>
@@ -362,9 +413,9 @@
 
         <div class="exp reveal">
           <span class="exp-dot"></span>
-          <div class="exp-card">
+          <div class="exp-card" data-spotlight>
             <div class="exp-meta">
-              <h3 class="exp-role">Data Scientist / AI Engineer (Senior Engineer)</h3>
+              <h3 class="exp-role">Data Scientist / AI Engineer (Senior)</h3>
               <span class="exp-date">Aug 2024 — Sept 2025</span>
             </div>
             <p class="exp-company">L&amp;T Technology Services · Ahmedabad</p>
@@ -381,7 +432,7 @@
 
         <div class="exp reveal">
           <span class="exp-dot"></span>
-          <div class="exp-card">
+          <div class="exp-card" data-spotlight>
             <div class="exp-meta">
               <h3 class="exp-role">Data Science Intern</h3>
               <span class="exp-date">May 2023 — Aug 2023</span>
@@ -417,7 +468,7 @@
     <div class="container">
       <div class="section-head reveal">
         <div class="section-tag">portfolio</div>
-        <h2 class="section-title">Featured <span class="gradient">projects</span></h2>
+        <h2 class="section-title">Featured <span class="gradient-text">projects</span></h2>
         <p class="section-subtitle">A curated selection of production-grade AI work across Agentic AI, MCP, GenAI, RAG, MLOps, and Computer Vision.</p>
       </div>
 
@@ -427,261 +478,233 @@
         <button class="filter-btn" data-filter="mcp">MCP</button>
         <button class="filter-btn" data-filter="rag">RAG</button>
         <button class="filter-btn" data-filter="genai">GenAI / LLM</button>
-        <button class="filter-btn" data-filter="mlops">MLOps / Deployment</button>
+        <button class="filter-btn" data-filter="mlops">MLOps</button>
         <button class="filter-btn" data-filter="cv">Computer Vision</button>
         <button class="filter-btn" data-filter="ml">Machine Learning</button>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
 
-        <article class="project reveal" data-cat="agentic mcp">
+        <article class="project reveal" data-cat="agentic mcp" data-spotlight>
           <div class="project-head">
             <div class="project-icon">TM</div>
             <span class="project-cat">Agentic AI</span>
           </div>
           <h3><a href="https://github.com/Shorya22/TradeMind" target="_blank" rel="noopener">TradeMind — Multi-Agent Stock Analysis</a></h3>
-          <p class="project-desc">Production-grade multi-agent AI platform for NSE (National Stock Exchange of India). Specialized agents collaborate to analyze stocks, evaluate fundamentals, technicals, and sentiment, and produce institutional-grade reports.</p>
-          <div class="project-stack">
-            <span>LangGraph</span><span>Multi-Agent</span><span>Python</span><span>FastAPI</span>
-          </div>
+          <p class="project-desc">Production-grade multi-agent AI platform for NSE (India). Specialized agents collaborate to analyze stocks, evaluate fundamentals, technicals, and sentiment, and produce institutional-grade reports.</p>
+          <div class="project-stack"><span>LangGraph</span><span>Multi-Agent</span><span>Python</span><span>FastAPI</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/TradeMind" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="agentic rag genai">
+        <article class="project reveal" data-cat="agentic rag genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon cyan">SR</div>
             <span class="project-cat">Agentic + NL2SQL</span>
           </div>
           <h3><a href="https://github.com/Shorya22/semantic-reporting" target="_blank" rel="noopener">Semantic Reporting — NL → SQL → Charts</a></h3>
           <p class="project-desc">Autonomous semantic reporting platform: converts natural language to SQL, executes against your DB, and renders interactive ECharts dashboards. Built on FastAPI + LangGraph + React.</p>
-          <div class="project-stack">
-            <span>LangGraph</span><span>FastAPI</span><span>React</span><span>NL2SQL</span>
-          </div>
+          <div class="project-stack"><span>LangGraph</span><span>FastAPI</span><span>React</span><span>NL2SQL</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/semantic-reporting" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mcp agentic">
+        <article class="project reveal" data-cat="mcp agentic" data-spotlight>
           <div class="project-head">
             <div class="project-icon pink">MCP</div>
             <span class="project-cat">MCP</span>
           </div>
           <h3><a href="https://github.com/Shorya22/MCP" target="_blank" rel="noopener">Model Context Protocol Servers</a></h3>
-          <p class="project-desc">Custom MCP server implementations exposing tools to LLM agents — including a Data Preprocessing Agentic System where an LLM agent analyzes uploaded CSVs and a Python execution agent (via MCP) runs cleaning, normalization, and transformations.</p>
-          <div class="project-stack">
-            <span>MCP</span><span>Python</span><span>Tool Use</span><span>LLM Agents</span>
-          </div>
+          <p class="project-desc">Custom MCP server implementations exposing tools to LLM agents — including a Data Preprocessing Agentic System where an LLM agent analyzes uploaded CSVs and a Python execution agent (via MCP) runs cleaning &amp; transformations.</p>
+          <div class="project-stack"><span>MCP</span><span>Python</span><span>Tool Use</span><span>LLM Agents</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/MCP" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="agentic mlops genai">
+        <article class="project reveal" data-cat="agentic mlops genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon green">AAI</div>
             <span class="project-cat">Agentic AI</span>
           </div>
           <h3><a href="https://github.com/Shorya22/End-To-End-Agentic-AI-FastAPI-Docker-Project" target="_blank" rel="noopener">End-to-End Agentic AI · FastAPI · Docker</a></h3>
-          <p class="project-desc">Full-stack autonomous agent system integrated with a FastAPI backend, containerized with Docker for seamless deployment. Modern microservice design + LLM capabilities to automate complex workflows end-to-end.</p>
-          <div class="project-stack">
-            <span>Agentic AI</span><span>FastAPI</span><span>Docker</span><span>LLM</span>
-          </div>
+          <p class="project-desc">Full-stack autonomous agent system integrated with a FastAPI backend, containerized with Docker for seamless deployment. Modern microservice design + LLM capabilities to automate complex workflows.</p>
+          <div class="project-stack"><span>Agentic AI</span><span>FastAPI</span><span>Docker</span><span>LLM</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/End-To-End-Agentic-AI-FastAPI-Docker-Project" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="rag genai">
+        <article class="project reveal" data-cat="rag genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon">RAG</div>
             <span class="project-cat">RAG</span>
           </div>
-          <h3><a href="https://github.com/Shorya22/RAG-Pipeline-Applications" target="_blank" rel="noopener">RAG Pipeline with LangChain &amp; HuggingFace</a></h3>
+          <h3><a href="https://github.com/Shorya22/RAG-Pipeline-Applications" target="_blank" rel="noopener">RAG Pipeline · LangChain · HuggingFace</a></h3>
           <p class="project-desc">End-to-end Retrieval-Augmented Generation pipeline using LangChain, HuggingFace embeddings, and a Q&amp;A chatbot built over the "Attention Is All You Need" research paper for grounded, citation-backed responses.</p>
-          <div class="project-stack">
-            <span>LangChain</span><span>HuggingFace</span><span>FAISS</span><span>RAG</span>
-          </div>
+          <div class="project-stack"><span>LangChain</span><span>HuggingFace</span><span>FAISS</span><span>RAG</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/RAG-Pipeline-Applications" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="genai">
+        <article class="project reveal" data-cat="genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon amber">FT</div>
             <span class="project-cat">Fine-Tuning</span>
           </div>
           <h3><a href="https://github.com/Shorya22/LLM-Fine-Tuning-Projects" target="_blank" rel="noopener">LLM Fine-Tuning · Mistral 7B Text-to-SQL</a></h3>
-          <p class="project-desc">PEFT QLoRA fine-tuning of Mistral 7B on a Text-to-SQL dataset. Produces a domain-specialized GenAI model that converts natural language queries into accurate SQL — with notebooks for the full training and inference workflow.</p>
-          <div class="project-stack">
-            <span>Mistral 7B</span><span>QLoRA</span><span>PEFT</span><span>HuggingFace</span>
-          </div>
+          <p class="project-desc">PEFT QLoRA fine-tuning of Mistral 7B on a Text-to-SQL dataset. Produces a domain-specialized GenAI model that converts natural language queries into accurate SQL.</p>
+          <div class="project-stack"><span>Mistral 7B</span><span>QLoRA</span><span>PEFT</span><span>HuggingFace</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/LLM-Fine-Tuning-Projects" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="agentic ml">
+        <article class="project reveal" data-cat="agentic ml" data-spotlight>
           <div class="project-head">
             <div class="project-icon cyan">AML</div>
             <span class="project-cat">Agentic ML</span>
           </div>
           <h3><a href="https://github.com/Shorya22/AgenticML" target="_blank" rel="noopener">AgenticML — Autonomous ML Workflows</a></h3>
           <p class="project-desc">Experiments combining classical ML pipelines with LLM-powered agents that select features, tune models, and explain results — moving traditional ML towards autonomous, agent-driven workflows.</p>
-          <div class="project-stack">
-            <span>Agentic ML</span><span>scikit-learn</span><span>LLM</span><span>AutoML</span>
-          </div>
+          <div class="project-stack"><span>Agentic ML</span><span>scikit-learn</span><span>LLM</span><span>AutoML</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/AgenticML" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mlops genai">
+        <article class="project reveal" data-cat="mlops genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon pink">AWS</div>
             <span class="project-cat">Cloud / Serverless</span>
           </div>
-          <h3><a href="https://github.com/Shorya22/AWS-Serverless-Deployment" target="_blank" rel="noopener">AWS Serverless Deployment · Docker · Lambda</a></h3>
-          <p class="project-desc">Reproducible SOP for deploying a Python 3.12 AWS Lambda using Docker, the Serverless Framework, ECR, and API Gateway. Solves manifest incompatibility issues for Linux/AMD64 Lambda Docker images on Windows.</p>
-          <div class="project-stack">
-            <span>AWS Lambda</span><span>Docker</span><span>Serverless</span><span>API Gateway</span>
-          </div>
+          <h3><a href="https://github.com/Shorya22/AWS-Serverless-Deployment" target="_blank" rel="noopener">AWS Serverless · Docker · Lambda</a></h3>
+          <p class="project-desc">Reproducible SOP for deploying a Python 3.12 AWS Lambda using Docker, the Serverless Framework, ECR, and API Gateway. Solves manifest incompatibility for Linux/AMD64 Lambda Docker images.</p>
+          <div class="project-stack"><span>AWS Lambda</span><span>Docker</span><span>Serverless</span><span>API Gateway</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/AWS-Serverless-Deployment" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mlops genai">
+        <article class="project reveal" data-cat="mlops genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon green">CHAT</div>
             <span class="project-cat">LLM Deployment</span>
           </div>
           <h3><a href="https://github.com/Shorya22/LLM_Chatbot_Deployment_On_Docker_VMs_END_TO_END" target="_blank" rel="noopener">LLM Chatbot · Docker · VMs · End-to-End</a></h3>
-          <p class="project-desc">Streamlit-based chatbot powered by Google Gemini API, containerized via Docker and hosted inside an Ubuntu VM (VirtualBox). Demonstrates full-stack VM deployment of a production LLM application.</p>
-          <div class="project-stack">
-            <span>Streamlit</span><span>Gemini API</span><span>Docker</span><span>Ubuntu VM</span>
-          </div>
+          <p class="project-desc">Streamlit chatbot powered by Google Gemini API, containerized via Docker and hosted inside an Ubuntu VM (VirtualBox). Demonstrates full-stack VM deployment of a production LLM application.</p>
+          <div class="project-stack"><span>Streamlit</span><span>Gemini API</span><span>Docker</span><span>Ubuntu VM</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/LLM_Chatbot_Deployment_On_Docker_VMs_END_TO_END" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="agentic genai">
+        <article class="project reveal" data-cat="agentic genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon">BR</div>
             <span class="project-cat">Browser Agent</span>
           </div>
           <h3><a href="https://github.com/Shorya22/Browser-Use-and-WebUI-Agent" target="_blank" rel="noopener">Browser-Use &amp; WebUI Agent</a></h3>
           <p class="project-desc">Autonomous web-browsing agent that controls a real browser to navigate sites, extract information, and complete multi-step web tasks — bringing tool-augmented agents to real-world browser automation.</p>
-          <div class="project-stack">
-            <span>Browser-Use</span><span>LLM Agents</span><span>Automation</span><span>Python</span>
-          </div>
+          <div class="project-stack"><span>Browser-Use</span><span>LLM Agents</span><span>Automation</span><span>Python</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/Browser-Use-and-WebUI-Agent" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mlops">
+        <article class="project reveal" data-cat="mlops" data-spotlight>
           <div class="project-head">
             <div class="project-icon amber">MLP</div>
             <span class="project-cat">MLOps</span>
           </div>
           <h3><a href="https://github.com/Shorya22/ML-Pipeline-Infrastructure-Design" target="_blank" rel="noopener">ML Pipeline Infrastructure Design</a></h3>
           <p class="project-desc">Reference architecture for production ML pipelines: data ingestion, validation, training, evaluation, registry, deployment, and monitoring — building a foundation that scales from notebook to production.</p>
-          <div class="project-stack">
-            <span>MLOps</span><span>CI/CD</span><span>MLflow</span><span>Pipelines</span>
-          </div>
+          <div class="project-stack"><span>MLOps</span><span>CI/CD</span><span>MLflow</span><span>Pipelines</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/ML-Pipeline-Infrastructure-Design" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="genai">
+        <article class="project reveal" data-cat="genai" data-spotlight>
           <div class="project-head">
             <div class="project-icon pink">SUM</div>
             <span class="project-cat">GenAI</span>
           </div>
           <h3><a href="https://github.com/Shorya22/GenAI-Applications" target="_blank" rel="noopener">Auto Review Summarization &amp; Sentiment</a></h3>
           <p class="project-desc">GenAI application using open-source LLMs to summarize long product reviews and analyze sentiment at scale — surfacing actionable insights for product quality improvement.</p>
-          <div class="project-stack">
-            <span>Open-Source LLMs</span><span>HuggingFace</span><span>NLP</span><span>Sentiment</span>
-          </div>
+          <div class="project-stack"><span>Open-Source LLMs</span><span>HuggingFace</span><span>NLP</span><span>Sentiment</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/GenAI-Applications" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="cv">
+        <article class="project reveal" data-cat="cv" data-spotlight>
           <div class="project-head">
             <div class="project-icon green">CV</div>
             <span class="project-cat">Computer Vision</span>
           </div>
           <h3><a href="https://github.com/Shorya22/Computer-Vision-Projects" target="_blank" rel="noopener">Computer Vision Projects</a></h3>
-          <p class="project-desc">Collection of CV projects: facial expression recognition (FER-2013) with CNNs &amp; OpenCV, face detection, and image-processing pipelines. Models cover happiness, sadness, neutral, and anger detection.</p>
-          <div class="project-stack">
-            <span>OpenCV</span><span>CNN</span><span>YOLO</span><span>Keras</span>
-          </div>
+          <p class="project-desc">Collection of CV projects: facial expression recognition (FER-2013) with CNNs &amp; OpenCV, face detection, and image-processing pipelines covering happiness, sadness, neutral, and anger detection.</p>
+          <div class="project-stack"><span>OpenCV</span><span>CNN</span><span>YOLO</span><span>Keras</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/Computer-Vision-Projects" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="ml">
+        <article class="project reveal" data-cat="ml" data-spotlight>
           <div class="project-head">
             <div class="project-icon">ML</div>
             <span class="project-cat">Machine Learning</span>
           </div>
           <h3><a href="https://github.com/Shorya22/Machine-Learning-Projects" target="_blank" rel="noopener">Machine Learning Projects</a></h3>
           <p class="project-desc">Curated ML portfolio including Human Activity Recognition from smartphone sensor data with 563 features, smart feature selection, and end-to-end classification pipelines on real datasets.</p>
-          <div class="project-stack">
-            <span>scikit-learn</span><span>Feature Engineering</span><span>Classification</span><span>EDA</span>
-          </div>
+          <div class="project-stack"><span>scikit-learn</span><span>Feature Engg</span><span>Classification</span><span>EDA</span></div>
           <div class="project-foot">
             <a href="https://github.com/Shorya22/Machine-Learning-Projects" target="_blank" rel="noopener" class="project-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
-              View Repo
+              View Repo →
             </a>
           </div>
         </article>
@@ -702,13 +725,13 @@
     <div class="container">
       <div class="section-head reveal">
         <div class="section-tag">credentials</div>
-        <h2 class="section-title">Education &amp; <span class="gradient">certifications</span></h2>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">certifications</span></h2>
         <p class="section-subtitle">Continuously learning to stay at the frontier of AI engineering.</p>
       </div>
 
       <div class="edu-grid">
-        <div class="edu-block reveal">
-          <h3>// education</h3>
+        <div class="edu-block reveal" data-spotlight>
+          <div class="card-head">// education</div>
           <div class="edu-item">
             <div class="deg">PG Diploma in Data Science</div>
             <div class="inst">Symbiosis Institute · Pune</div>
@@ -726,8 +749,8 @@
           </div>
         </div>
 
-        <div class="edu-block reveal">
-          <h3>// certifications</h3>
+        <div class="edu-block reveal" data-spotlight>
+          <div class="card-head">// certifications</div>
           <ul class="cert-list">
             <li>
               <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -760,7 +783,7 @@
     <div class="container">
       <div class="contact-wrap reveal">
         <div class="section-tag">get_in_touch</div>
-        <h2>Let's build something <span class="gradient" style="background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">intelligent</span> together.</h2>
+        <h2>Let's build something <span class="gradient-text">intelligent</span> together.</h2>
         <p>Open to Senior AI Engineer opportunities, consulting, and collaborations on Agentic AI, MCP, and Generative AI products.</p>
 
         <div class="contact-cta">
@@ -768,7 +791,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Email me
           </a>
-          <a href="https://www.linkedin.com/in/shoryamathura22/" target="_blank" rel="noopener" class="btn btn-ghost">
+          <a href="https://www.linkedin.com/in/shoryamathura22" target="_blank" rel="noopener" class="btn btn-ghost">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             Connect on LinkedIn
           </a>
@@ -793,7 +816,7 @@
           <div class="contact-card">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
             <h4>Resume</h4>
-            <p><a href="https://drive.google.com/file/d/1WhcgdDEqDg4rINuAzCettZJgPwj8aJy7/view?usp=sharing" target="_blank" rel="noopener">Download CV</a></p>
+            <p><a href="https://drive.google.com/file/d/1dz6KFy87q8MrU8hWyin2pyFueuHCeNCx/view?usp=drivesdk" target="_blank" rel="noopener">Download CV</a></p>
           </div>
         </div>
       </div>
@@ -803,12 +826,12 @@
   <!-- ============== FOOTER ============== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Shorya Sharma · Senior AI Engineer · Built with care &amp; coffee ☕</p>
+      <p>© <span id="year"></span> Shorya Sharma · Senior AI Engineer · Crafted with <span style="color:var(--accent-4)">♥</span> &amp; code</p>
       <div class="footer-socials">
         <a href="https://github.com/Shorya22" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.58A12 12 0 0 0 12 .3z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/shoryamathura22/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/shoryamathura22" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
         <a href="https://www.kaggle.com/shorya22" target="_blank" rel="noopener" class="social-btn" aria-label="Kaggle">
@@ -821,22 +844,33 @@
     </div>
   </footer>
 
+  <!-- scroll to top -->
+  <button class="to-top" id="toTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
   <!-- ============== JS ============== -->
   <script>
     // year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // nav scrolled state
-    const nav = document.getElementById('nav');
-    const onScroll = () => {
-      if (window.scrollY > 30) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
+    // duplicate marquee for seamless loop
+    (function () {
+      const marquee = document.getElementById('marquee');
+      if (marquee) marquee.innerHTML += marquee.innerHTML;
+    })();
 
-      // active nav link based on section
+    // nav scrolled state + active link
+    const nav = document.getElementById('nav');
+    const toTop = document.getElementById('toTop');
+    const onScroll = () => {
+      if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+      if (window.scrollY > 600) toTop.classList.add('show'); else toTop.classList.remove('show');
+
       const sections = document.querySelectorAll('section[id]');
       let current = '';
       sections.forEach(s => {
-        const top = s.offsetTop - 120;
+        const top = s.offsetTop - 140;
         if (window.scrollY >= top) current = s.id;
       });
       document.querySelectorAll('.nav-links a').forEach(a => {
@@ -846,18 +880,24 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // mobile menu toggle
+    // mobile drawer
     const navToggle = document.getElementById('navToggle');
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        nav.classList.toggle('nav-mobile-open');
-      });
-      document.querySelectorAll('.nav-links a').forEach(a => {
-        a.addEventListener('click', () => nav.classList.remove('nav-mobile-open'));
-      });
+    const drawer = document.getElementById('mobileDrawer');
+    let drawerOpen = false;
+    function setDrawer(open) {
+      drawerOpen = open;
+      drawer.classList.toggle('open', open);
+      drawer.setAttribute('aria-hidden', !open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      navToggle.innerHTML = open
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
     }
+    navToggle.addEventListener('click', () => setDrawer(!drawerOpen));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrawer(false)));
 
-    // typing animation in hero
+    // hero typing animation
     const roleText = document.getElementById('roleText');
     const roles = [
       'Senior AI Engineer',
@@ -865,18 +905,19 @@
       'MCP & Multi-Agent Systems',
       'Generative AI · RAG · LLM',
       'LangGraph · LangChain · FastAPI',
+      'AWS · Docker · MLOps',
     ];
     let rIdx = 0, cIdx = 0, deleting = false;
     function typeLoop() {
       const cur = roles[rIdx];
       if (!deleting) {
         roleText.textContent = cur.slice(0, ++cIdx);
-        if (cIdx === cur.length) { deleting = true; setTimeout(typeLoop, 1600); return; }
+        if (cIdx === cur.length) { deleting = true; setTimeout(typeLoop, 1700); return; }
       } else {
         roleText.textContent = cur.slice(0, --cIdx);
         if (cIdx === 0) { deleting = false; rIdx = (rIdx + 1) % roles.length; }
       }
-      setTimeout(typeLoop, deleting ? 35 : 70);
+      setTimeout(typeLoop, deleting ? 32 : 65);
     }
     typeLoop();
 
@@ -891,7 +932,7 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // counter animation
+    // animated stat counters
     const counters = document.querySelectorAll('.stat-value');
     const counterIO = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -903,9 +944,8 @@
         const tick = (t) => {
           const p = Math.min(1, (t - start) / dur);
           const ease = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.floor(ease * target) + (target >= 10 ? '+' : '');
-          if (p < 1) requestAnimationFrame(tick);
-          else el.textContent = target + '+';
+          el.textContent = Math.floor(ease * target) + '+';
+          if (p < 1) requestAnimationFrame(tick); else el.textContent = target + '+';
         };
         requestAnimationFrame(tick);
         counterIO.unobserve(el);
@@ -923,13 +963,21 @@
         const f = btn.dataset.filter;
         projects.forEach(p => {
           const cats = (p.dataset.cat || '').split(' ');
-          const show = f === 'all' || cats.includes(f);
-          p.style.display = show ? '' : 'none';
+          p.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
         });
       });
     });
 
-    // smooth in-page anchors
+    // mouse-tracked spotlight on cards
+    document.querySelectorAll('[data-spotlight]').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    // smooth scroll for anchors
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
@@ -939,6 +987,9 @@
         }
       });
     });
+
+    // scroll to top
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 
 </body>
