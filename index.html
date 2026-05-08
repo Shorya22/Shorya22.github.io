@@ -18,6 +18,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Inline theme bootstrap to prevent FOUC -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        var theme = saved || (prefersLight ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -41,6 +53,10 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle dark / light theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
       <a href="https://drive.google.com/file/d/1dz6KFy87q8MrU8hWyin2pyFueuHCeNCx/view?usp=drivesdk" target="_blank" rel="noopener" class="nav-cta">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Resume
@@ -901,6 +917,29 @@
   <script>
     // year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // theme toggle
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const meta = document.querySelector('meta[name="theme-color"]');
+      function apply(theme) {
+        if (theme === 'light') {
+          root.setAttribute('data-theme', 'light');
+          if (meta) meta.setAttribute('content', '#f5f6fb');
+        } else {
+          root.removeAttribute('data-theme');
+          if (meta) meta.setAttribute('content', '#07070c');
+        }
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+      }
+      // initial sync (theme already applied inline; just set meta)
+      apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+      btn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        apply(next);
+      });
+    })();
 
     // duplicate marquee for seamless loop
     (function () {
